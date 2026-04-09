@@ -340,3 +340,236 @@ footer a:hover {
         margin: 2rem auto;
     }
 }
+
+/* --- Page Projets --- */
+
+.projets-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titre-projets {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--violet-doux);
+    margin-bottom: 3rem;
+}
+
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.projet-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+}
+
+.projet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projet-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projet-content h3 {
+    color: var(--violet-doux);
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.projet-content p {
+    color: var(--gris-fonce);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.tags {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background-color: #f0efff;
+    color: var(--violet-doux);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.projet-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gris-clair);
+    padding-top: 1rem;
+}
+
+.projet-links a, .projet-links span {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.projet-links a:hover {
+    color: var(--violet-doux);
+}
+
+/* Ajoute la ligne violette entre l'image et le texte */
+.projet-card img {
+    border-bottom: 4px solid var(--violet-doux); /* La ligne qui passe entre l'image et l'info */
+}
+
+/* Optionnel : Si tu veux que la ligne change de couleur au survol comme sur certains designs */
+.projet-card:hover img {
+    border-bottom-color: var(--gris-fonce); 
+    transition: border-color 0.3s ease;
+}
+
+/* --- Page Passions (Design Moderne/Asymétrique) --- */
+
+.passions-section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.titre-passions { text-align: center; color: var(--violet-doux); font-size: 2.5rem; }
+.intro-passions { text-align: center; color: var(--gris-fonce); margin-bottom: 3rem; }
+
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 15px;
+}
+
+/* Grille asymétrique */
+.passion-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--violet-doux);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.passion-card.large { grid-row: span 2; }
+.passion-card.wide { grid-column: span 2; }
+
+.passion-card:hover { transform: scale(0.98); }
+
+/* Overlay texte élégant */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+}
+
+.overlay h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.overlay p { font-size: 0.9rem; opacity: 0.9; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .passions-grid { grid-template-columns: 1fr; }
+    .passion-card.large, .passion-card.wide { grid-row: span 1; grid-column: span 1; }
+}
+
+/* --- Page Divertissement --- */
+
+.entert-section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titre-entert { color: var(--violet-doux); font-size: 2.8rem; margin-bottom: 0.5rem; }
+.sub-entert { color: var(--gris-fonce); margin-bottom: 4rem; font-size: 1.1rem; }
+
+.entert-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.entert-item {
+    flex: 1 1 450px; /* Prend de la place mais s'adapte */
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    text-align: left;
+    transition: all 0.4s ease;
+    cursor: default;
+    box-shadow: 0 15px 35px rgba(108, 99, 255, 0.15);
+}
+
+/* Variations de couleurs basées sur tes variables */
+.gaming { background: linear-gradient(135deg, var(--violet-doux), #8a84ff); }
+.cinema { background: linear-gradient(135deg, var(--violet-foce), var(--violet-doux)); }
+.voyage { background: linear-gradient(135deg, var(--orange-vif), #ffbd5e); }
+.lecture { background: linear-gradient(135deg, #444, var(--gris-tres-fonce)); }
+
+.entert-item:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.entert-icon {
+    font-size: 3.5rem;
+    margin-right: 25px;
+    opacity: 0.8;
+}
+
+.entert-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.entert-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .entert-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .entert-icon { margin-right: 0; margin-bottom: 15px; }
+}
