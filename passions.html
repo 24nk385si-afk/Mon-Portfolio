@@ -27,38 +27,58 @@
  </header>
  <main>
     <section class="passions-section">
-        <h2 class="titre-passions">Mes Passions</h2>
-        <p class="intro-passions">Au-delà du code, voici ce qui nourrit ma créativité et mon équilibre.</p>
-        
-        <div class="passions-grid">
-            <div class="passion-card large">
-                <div class="overlay">
-                    <h3>Veille Technologique</h3>
-                    <p>Toujours à l'affût des dernières avancées en IA et Frameworks.</p>
-                </div>
+        <h2 class="titre-accordeon">Mes Passions</h2>
+        <p class="intro-accordeon">Ce qui m'inspire et nourrit ma créativité au quotidien.</p>
+
+        <div class="accordeon-container">
+            
+            <div class="accordeon-item">
+                <a href="#p1" class="accordeon-link">
+                    <img src="IMAGE/veille.png" alt="Veille Technologique">
+                    <div class="accordeon-content">
+                        <h3>Veille Tech</h3>
+                        <p>IA, nouveaux frameworks et exploration du futur.</p>
+                    </div>
+                </a>
             </div>
 
-            <div class="passion-card">
-                <div class="overlay">
-                    <h3>Design Graphique</h3>
-                    <p>Création visuelle et identité de marque.</p>
-                </div>
+            <div class="accordeon-item">
+                <a href="#p2" class="accordeon-link">
+                    <img src="IMAGE/design.png" alt="Design Graphique">
+                    <div class="accordeon-content">
+                        <h3>Design</h3>
+                        <p>Identité visuelle et interfaces centrées sur l'utilisateur.</p>
+                    </div>
+                </a>
             </div>
 
-            <div class="passion-card">
-                <div class="overlay">
-                    <h3>Photographie</h3>
-                    <p>Capturer l'instant et le mouvement.</p>
-                </div>
+            <div class="accordeon-item">
+                <a href="#p3" class="accordeon-link">
+                    <img src="IMAGE/photo.png" alt="Photographie">
+                    <div class="accordeon-content">
+                        <h3>Photographie</h3>
+                        <p>Capturer l'instant présent et jouer avec la lumière.</p>
+                    </div>
+                </a>
             </div>
 
-            <div class="passion-card wide">
-                <div class="overlay">
-                    <h3>Musique & Création</h3>
-                    <p>La composition comme source d'inspiration quotidienne.</p>
-                </div>
+            <div class="accordeon-item">
+                <a href="#p4" class="accordeon-link">
+                    <img src="IMAGE/musique.png" alt="Musique">
+                    <div class="accordeon-content">
+                        <h3>Musique</h3>
+                        <p>Composition et mélodie comme source d'énergie.</p>
+                    </div>
+                </a>
             </div>
+
         </div>
+
+        <div id="p1" class="lightbox"><a href="#" class="close">&times;</a><img src="IMAGE/veille.png"></div>
+        <div id="p2" class="lightbox"><a href="#" class="close">&times;</a><img src="IMAGE/design.png"></div>
+        <div id="p3" class="lightbox"><a href="#" class="close">&times;</a><img src="IMAGE/photo.png"></div>
+        <div id="p4" class="lightbox"><a href="#" class="close">&times;</a><img src="IMAGE/musique.png"></div>
+
     </section>
 </main>
  <footer>
